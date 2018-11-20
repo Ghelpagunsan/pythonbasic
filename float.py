@@ -68,6 +68,63 @@ def circle(r):
 	float(cir)
 	print("circle's area is %.2f cm" %cir)
 
+def pyramid(n):
+    x = 1
+    while (x <= n):
+        print("1.01" * x)
+        x = x + 1
+    return
+
+def triangle(a, b):
+	x = a * a
+	y = b * b
+	z = math.sqrt(x+y)
+	print("%.2f is the hypotenuse" %z) 
+
+def cylinder(r, h):
+	x = r
+	y = h
+	a = 2 * (math.pi * (x * y))
+	b = 2 * (math.pi *(x * x))
+	area = a + b
+	print("cylinder's area is %.2f" % area)
+
+def tangent(a, b):
+	x=a
+	y=b
+	tan = (x/y)
+	print(tan)
+
+def parallel(b, h):
+	a= b
+	c = h
+	print(c*c)
+
+def trap(a, b, h):
+	x = a
+	y = b
+	z = h
+	area = ((x+y)/2) * z
+	print (area)
+
+def square(s):
+	x = s
+	area = x * x * x * x
+	print("area of the square %.2f" %area)
+
+def volume(r, h):
+	a = r
+	b = h
+	vol = math.pi*(a*a)*b
+	print(vol)
+
+def cone(r, h):
+	x = r
+	y = h
+	a = math.pi * x
+	b = x + (math.sqrt((y*y) + (x*x)))
+	area = a * b
+	print("cone area is %.2f" % area)
 
 
 
@@ -83,3 +140,12 @@ whilestate(1.1, 10.1)
 floordiv(200.1)
 rectangle(4, 5.3)
 circle(17.4)
+pyramid(8)
+triangle(4.2, 6.1)
+cylinder(5,5.7)
+tangent(26.0, 15.0)
+parallel(5.4, 8.1)
+trap(3.4, 2.8, 10.2)
+square(3.4)
+volume(3, 5.5)
+cone(4.3, 7)
