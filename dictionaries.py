@@ -4,7 +4,7 @@ def show():
 	"age" : 20 ,
 	"city" : "Davao"
 	}
-	print(d)
+	return str(d)
 
 def access():
 	d = {
@@ -14,7 +14,7 @@ def access():
 	}
 	x = d.get("age")
 	y = d["name"]
-	print(str(y) + " , " + str(x))
+	return str(str(y) + " , " + str(x))
 
 def change():
 	d = {
@@ -23,7 +23,7 @@ def change():
 	"city" : "Davao"
 	}
 	x = d["city"] = "Bislig"
-	print(x)
+	return str(x)
 
 def getvals():
 	d = {
@@ -50,7 +50,7 @@ def check():
 	"gender" : "Male"
 	}
 	if "gender" in d:
-		print("Found!")
+		return str("Found!")
 
 def add():
 	d = {
@@ -59,7 +59,7 @@ def add():
 	"city" : "Davao"
 	}
 	d["status"] = "Single"
-	print(d)
+	return str(d)
 
 def length():
 	d = {
@@ -68,7 +68,7 @@ def length():
 	"city" : "Davao",
 	"status" : "Single"
 	}
-	print(len(d))
+	return str(len(d))
 
 def remove():
 	d = {
@@ -78,7 +78,7 @@ def remove():
 	"status" : "Single"
 	}
 	d.pop("status")
-	print(d)
+	return str(d)
 
 def updates():
 	d = {
@@ -88,13 +88,11 @@ def updates():
 	"status" : "Single"
 	}
 	d.update({"name":"Ghelo"}) 
-	print(d)
+	return str(d)
 
-def create():
-	x = ("Name", "Age", "City")
-	y= (0)
+def create(x, y):
 	d = dict.fromkeys(x)
-	print(d)
+	return str(d)
 
 def keys():
 	d = {
@@ -104,7 +102,7 @@ def keys():
 	"status" : "Single"
 	}
 	x = d.keys()
-	print(x)
+	return str(x)
 
 def default():
 	d = {
@@ -114,7 +112,7 @@ def default():
 	"status" : "Single"
 	}
 	x = d.setdefault("age", 19)
-	print(x)
+	return str(x)
 
 def clearing():
 	d = {
@@ -124,7 +122,7 @@ def clearing():
 	"status" : "Single"
 	}
 	x = d.clear()
-	print(x)
+	return str(x)
 
 def delete():
 	d = {
@@ -133,11 +131,11 @@ def delete():
 	"gender" : "Male"
 	}
 	del d["weight"]
-	print(d)
+	return str(d)
 
 def dictionary():
 	d = dict(a=1, b=2, c=3)
-	print(d)
+	return str(d)
 
 def copies():
 	d = {
@@ -147,7 +145,7 @@ def copies():
 	"status" : "Single"
 	}
 	x = d.copy()
-	print(x)
+	return str(x)
 
 def onebyone():
 	d = {
@@ -167,7 +165,7 @@ def popitems(): #retieve the popped key and value
 	"status" : "Single"
 	}
 	x = d.popitem()
-	print(x)
+	return str(x)
 
 def setdefaults(): #other way around
 	d = {
@@ -177,29 +175,29 @@ def setdefaults(): #other way around
 	"status" : "Single"
 	}
 	x = d.setdefault("religion", "Christian")
-	print(x)
+	return str(x)
 
 
 
 
-show()
-access()
-change()
+print(show())
+print(access())
+print(change())
 getvals()
 forloop()
-check()
-add()
-length()
-remove()
-updates()
-create()
-keys()
-default()
-clearing()
-delete()
-dictionary()
-copies()
+print(check())
+print(add())
+print(length())
+print(remove())
+print(updates())
+print(create(("Name", "Age", "City"), 0))
+print(keys())
+print(default())
+print(clearing())
+print(delete())
+print(dictionary())
+print(copies())
 onebyone()
-popitems()
-setdefaults()
+print(popitems())
+print(setdefaults())
 

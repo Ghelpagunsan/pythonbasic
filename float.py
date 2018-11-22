@@ -1,72 +1,66 @@
 import math
 
-def division():
-	y = 5.02
-	z = 15.13
-	print(z/y)
+def division(y, z):
+	return float(z/y)
 
-def addition():
-	a = 1.1
-	b = 2.16
+def addition(a, b):
 	c = a+b
-	print("%.2f" % c)
+	d = ("%.2f" % c)
+	return d
 
 def multiplication():
 	a = b = c = 2.16
-	print(a*b*c)
+	return (a*b*c)
 
-def subtration():
-	x = 12.01
-	y = 4.88
-	print(x-y)
+def subtration(x, y):
+	return (x-y)
 
-def ifstate():
+def ifstate(x, y):
 	x = 12.01
 	y = 12.001
 	if x<=y:
-		print(y)
+		return y
 	else:
-		print(x)
+		return x 
 
-def elseif():
-	x=2.1
-	y=2.101
-	z=2.01
+def elseif(x, y, z):
 	if x==y and y==z:
-		print(x)
+		return x
 	elif x==y and z<y:
-		print(y)
+		return y
 	else:
-		print(z)
+		return z
 
 def forstate():
 	n = [float(x)/10 for x in range(10)]
-	print(n)
+	return n
 
 def whilestate(s, e):
 	x = s
 	while x<=e:
-		print(x)
+		return x
 		x+=1
 
 def floordiv(n):
 	x = n
 	y = 4
 	z = x // y
-	print(z)
+	return z
 
 def rectangle(l, w):
 	x = l
 	y = w
 	area = x*y
 	float(area)
-	print("the area of rectangle is %.2f" %area)
+	z = ("the area of rectangle is %.2f" %area)
+	return str(z)
 
 def circle(r):
 	y = r
 	cir = (math.pi * (y*y))
 	float(cir)
-	print("circle's area is %.2f cm" %cir)
+	c  = ("circle's area is %.2f cm" %cir)
+	return str(c)
 
 def pyramid(n):
     x = 1
@@ -79,7 +73,8 @@ def triangle(a, b):
 	x = a * a
 	y = b * b
 	z = math.sqrt(x+y)
-	print("%.2f is the hypotenuse" %z) 
+	i = ("%.2f is the hypotenuse" %z)
+	return str(i) 
 
 def cylinder(r, h):
 	x = r
@@ -87,36 +82,39 @@ def cylinder(r, h):
 	a = 2 * (math.pi * (x * y))
 	b = 2 * (math.pi *(x * x))
 	area = a + b
-	print("cylinder's area is %.2f" % area)
+	z = ("cylinder's area is %.2f" % area)
+	return str(z)
 
 def tangent(a, b):
 	x=a
 	y=b
 	tan = (x/y)
-	print(tan)
+	return tan
 
 def parallel(b, h):
 	a= b
 	c = h
-	print(c*c)
+	x = (c*c)
+	return x
 
 def trap(a, b, h):
 	x = a
 	y = b
 	z = h
 	area = ((x+y)/2) * z
-	print (area)
+	return area
 
 def square(s):
 	x = s
 	area = x * x * x * x
-	print("area of the square %.2f" %area)
+	y = ("area of the square %.2f" %area)
+	return str(y)
 
 def volume(r, h):
 	a = r
 	b = h
 	vol = math.pi*(a*a)*b
-	print(vol)
+	return vol
 
 def cone(r, h):
 	x = r
@@ -124,28 +122,28 @@ def cone(r, h):
 	a = math.pi * x
 	b = x + (math.sqrt((y*y) + (x*x)))
 	area = a * b
-	print("cone area is %.2f" % area)
+	return str("cone area is %.2f" % area)
 
 
 
 
-division()
-addition()
-multiplication()
-subtration()
-ifstate()
-elseif()
-forstate()
-whilestate(1.1, 10.1)
-floordiv(200.1)
-rectangle(4, 5.3)
-circle(17.4)
+print(division(2.5, 16.3))
+print(addition(4.5, 6.3))
+print(multiplication())
+print(subtration(13.45, 6.3))
+print(ifstate(12.01, 12.001))
+print(elseif(2.01, 2.101, 2.001))
+print(forstate())
+print(whilestate(1.1, 10.1))
+print(floordiv(200.1))
+print(rectangle(4, 5.3))
+print(circle(17.4))
 pyramid(8)
-triangle(4.2, 6.1)
-cylinder(5,5.7)
-tangent(26.0, 15.0)
-parallel(5.4, 8.1)
-trap(3.4, 2.8, 10.2)
-square(3.4)
-volume(3, 5.5)
-cone(4.3, 7)
+print(triangle(4.2, 6.1))
+print(cylinder(5,5.7))
+print(tangent(26.0, 15.0))
+print(parallel(5.4, 8.1))
+print(trap(3.4, 2.8, 10.2))
+print(square(3.4))
+print(volume(3, 5.5))
+print(cone(4.3, 7))

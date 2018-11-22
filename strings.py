@@ -1,24 +1,26 @@
 def splitting(x):
-	print(x.split(" "))
+	return str(x.split(" "))
 
 def concatenate(n):
 	x = "Holy"
-	print(str(x) + str(n))
+	y = (str(x) + str(n))
+	return y
 
 def length(n):
-	print(len(n))
+	m = len(n)
+	return m
 
 def position(n):
-	print(n[5])
+	return str(n[5])
 
 def whitespace(n):
-	print(n.strip())
+	return n.strip()
 
 def lowercasing(n):
-	print(n.lower())
+	return str(n.lower())
 
 def uppercasing(n):
-	print(n.upper())
+	return str(n.upper())
 
 def forlooping(n):
 	for i in n:
@@ -34,22 +36,22 @@ def ifstate(n):
 	n = len(n)
 	x = len("perfect")
 	if x == n:
-		print("Match")
+		return str("Match")
 	else:
-		print("Unmatch")
+		return str("Unmatch")
 
 def elifstate(n):
 	n = len(n)
 	x = len("perfect")
 	if x == n:
-		print("Match")
+		return str("Match")
 	elif n<x:
-		print("Add more")
+		return str("Add more")
 	else:
-		print("Unmatch")
+		return str("Unmatch")
 
 def range(n):
-	print(n[3:6])
+	return str(n[3:6])
 
 def names():
 	n = ["Joy", "Shem", "Van", "Mark"]
@@ -62,27 +64,29 @@ def numbering():
 		print(a, b)
 
 def replacing(n):
-	print(n.replace("n", "m"))
+	x = (n.replace("n", "m"))
+	return x
 
 def check():
 	n = ["hi", 5, "me", 4]
 	if  "hi" in n:
-		print("Existing")
+		return str("Existing")
 	else:
-		print("add!")
+		return str("add!")
 
 def counting():
 	n = ["hi", 5, 5, 5, "hello"]
-	print(n.count(5))
+	x = (n.count(5))
+	return x
 
 def inttostr(n):
-	print(str(n))
+	return str(n)
 
 def adding():
 	a = "Hello"
 	b = "Hi"
 	c = a + b
-	print(len(c))
+	return str(len(c))
 
 def subtracting():
 	a = "molten"
@@ -90,30 +94,30 @@ def subtracting():
 	x = len(a)
 	y = len(b)
 	c = x - y
-	print(c)
+	return str(c)
 
 
 
 
 
 
-splitting("2 5 3 5")
-concatenate("Cross")
-length("qwertyuiop")
-position("trinity")
-whitespace("Call maybe")
-lowercasing("AMAZING")
-uppercasing("good job")
+print(splitting("2 5 3 5"))
+print(concatenate("Cross"))
+print(length("qwertyuiop"))
+print(position("trinity"))
+print(whitespace("Call maybe"))
+print(lowercasing("AMAZING"))
+print(uppercasing("good job"))
 forlooping("Morning")
 whilelooping("Evening")
-ifstate("seven")
-elifstate("torment")
-range("moment")
+print(ifstate("seven"))
+print(elifstate("torment"))
+print(range("moment"))
 names()
 numbering()
-replacing("nick")
-check()
-counting()
-inttostr(234)
-adding()
-subtracting()
+print(replacing("nick"))
+print(check())
+print(counting())
+print(inttostr(234))
+print(adding())
+print(subtracting())

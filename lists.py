@@ -2,46 +2,41 @@ def add():
 	cars = ["Toyota", "Suzuki", "Honda"]
 	cars.append("Ford")
 	cars.sort()
-	print(cars)
+	return cars
 
 def remove():
 	cars = ["Ford", "Honda", "Suzuki", "Toyota"]
 	print("Before removing" + str(cars))
 	cars.remove("Honda")
-	print("After removing" + str(cars))
+	return str("After removing" + str(cars))
 
 def update():
 	cars = {"Ford", "Honda", "Suzuki", "Toyota"}
 	cars.update(["Pajero", "Mitzubishi"])
 	sorted(cars)
-	print(cars)
+	return cars
 
-def getvalue():
-	num = [1, 2, 3, 4 ,5]
-	print(num.index(4))
+def getvalue(num):
+	return str(num.index(4))
 
-def popval():
-	letters = ['a', 'b', 'c', 'd']
+def popval(letters):
 	letters.pop()
-	print(letters)
+	return letters
 
-def reversing():
-	x = [2, 4, 6, 8]
+def reversing(x):
 	x.reverse()
-	print(x)
+	return x
 
 
-def counting():
-	x = [1, 2, 3, 4, 5, 6, 7, 8]
+def counting(x):
 	i = 0
 	for j in x:
 		i+=1
-	print(i)
+	return i
 
-def deletingval():
-	city = ["Davao", "Cebu", "Manila", "Butuan"]
+def deletingval(city):
 	del city[3]
-	print(city)
+	return city
 
 def looping():
 	year = [1999, 2000, 2001, 2002, 2003]
@@ -51,40 +46,33 @@ def looping():
 def check():
 	year = [1999, 2000, 2001, 2002, 2003]
 	if 2001 in year:
-		print("Found!")	
+		return str("Found!")	
 
-def length():
-	n = [1, 2, 3, 4, 5, 6]
-	print("The length of the list is " + str(len(n)))
+def length(n):
+	return str("The length of the list is " + str(len(n)))
 
 def multipleset():
 	n = [((1, 2), (3,4)),(1, 2, 3)]
-	print(n)
+	return str(n)
 	y = n[0]
-	print(y)
+	return str(y)
 	x = y[0]
-	print(x)
+	return str(x)
 	z = x[1]
-	print(z)
+	return str(z)
 
-def intersections():
-	a = {"a", "b", "c", "d"}
-	b = {"a", "d", "f"}
+def intersections(a, b):
 	a.intersection_update(b)
-	print(a)
+	return str(a)
 
-def differences():
-	a = {"a", "b", "c", "d"}
-	b = {"a", "d", "f"}
+def differences(a, b):
 	c = b.difference(a)
-	print(c)
+	return str(c)
 
-def symmetric():
-	a = {"a", "b", "c", "d"}
-	b = {"a", "d", "f"}
+def symmetric(a, b):
 	c = a.symmetric_difference(b)
 	sorted(c)
-	print(c)
+	return str(c)
 
 def unions():
 	a = {1, 2, 3}
@@ -92,13 +80,13 @@ def unions():
 	c = {7, 8, 9}
 	d = {10, 11, 12}
 	e = a.union(b, c, d)
-	print(e)
+	return str(e)
 
 def extends():
 	b = ["True", "False"]
 	a = [1, 0]
 	b.extend(a)
-	print(b)
+	return str(b)
 
 def whileloop():
 	a = [1, 2, 3, 4, 5]
@@ -107,11 +95,10 @@ def whileloop():
 		i+=2
 		print(i)
 
-def sorting():
-	x = [8, 4, 5, 6]
+def sorting(x):
 	x.append(7)
 	x.sort()
-	print(x)
+	return str(x)
 
 def forloop():
 	a = [1, 2, 3, 4]
@@ -129,23 +116,23 @@ def forloop():
 
 
 
-add()
-remove()
-update()
-getvalue()
-popval()
-reversing()
-counting()
-deletingval()
+print(add())
+print(remove())
+print(update())
+print(getvalue([1, 2, 3, 4 ,5]))
+print(popval(['a', 'b', 'c', 'd']))
+print(reversing([2, 4, 6, 8]))
+print(counting([1, 2, 3, 4, 5, 6, 7, 8]))
+print(deletingval(["Davao", "Cebu", "Manila", "Butuan"]))
 looping()
-check()
-length()
-multipleset()
-intersections()
-differences() 
-symmetric()
-unions()
-extends()
+print(check())
+print(length([1, 2, 3, 4, 5, 6]))
+print(multipleset())
+print(intersections({"a", "b", "c", "d"}, {"a", "d", "f"}))
+print(differences({"a", "b", "c", "d"}, {"a", "d", "f"})) 
+print(symmetric({"a", "b", "c", "d"}, {"a", "d", "f"}))
+print(unions())
+print(extends())
 whileloop()
-sorting()
+print(sorting([8, 4, 5, 6]))
 forloop()

@@ -2,7 +2,7 @@ def add():
 	a=5
 	b=6
 	c=a+b
-	print(c)
+	return c
 
 
 def substract(n):
@@ -11,28 +11,29 @@ def substract(n):
 def multiply():
 	x = 2
 	y = 4
-	print(x*y)
+	return x*y
 
 def divide(n):
 	return 100 / n
 
 def cont(age):
-	print("I am " + str(age) + " years old")
+	c = "I am " + str(age) + " years old"
+	return c
 
-def greater():
-	a = 3
-	b = 4
+def greater(a, b):
 	if a<b:
-		print("A")
+		return a
 	else:
-		print("B")
+		return b
 
 def lesser(n):
 	a = 15
+	b = str("I lose")
+	c = str("i Win")
 	if a<n:
-		print("I Lose")
+		return b
 	else:
-		print("I Win")
+		return c
 
 def recursion(n):
 	if n<=20:
@@ -43,55 +44,53 @@ def recursion(n):
 def equal(n):
 	a = 21
 	if a==n:
-		print("Match")
+		return str("Match")
 	else:
-		print("Nah")
+		return str("Nah")
 
 def forloop():
 	sum = [1,2,3,4]
 	for i in sum:
-		print(sum)
+		return sum
 
 def whileloop():
 	i = 2
 	while i<6:
-		print(i)
+		return i
 		i+=1
 
 def ifstate():
 	a = 3
 	b = 5
 	if a<=b:
-		print("Yey")
+		return str("Yey")
 	else:
-		print("Nay")
+		return str("Nay")
 
-def elifstate():
-	a = 3
-	b = 4
+def elifstate(a, b):
 	if a<b:
-		print(a+b)
+		return a+b
 	elif a>b:
-		print(a-b)
+		return a-b
 	else:
-		print(a*b)
+		return a*b
 
-def swap():
-	a = 1
-	b = 2
-	print("Before swap a = %d and b = %d" %(a, b))
+def swap(a, b):
+	c = str("Before swap a = %d and b = %d" %(a, b))
 	a, b = b, a
-	print("After swaping a = %d and b = %d" %(a, b))
+	d = str("After swaping a = %d and b = %d" %(a, b))
+	return str(c + "\n" + d)
 
-def insert():
-	sum = [1,2,3]
+def insert(sum):
+	#sum = [1,2,3]
 	sum.insert(3, 4)
-	print(sum[3])
+	a = sum[3]
+	return a
 
 def popnum():
 	x = [2,4,6,8]
 	x.pop()
-	print(x)
+	return x
 
 def triangle(n):
     x = 1
@@ -100,8 +99,8 @@ def triangle(n):
         x = x + 1
     return
 
-def count():
-	xam = [1,1,1,2,2]
+def count(xam):
+	#xam = [1,1,1,2,2]
 	f=0
 	l=0
 	for i in xam:
@@ -109,47 +108,38 @@ def count():
 			f+=1
 		elif i==2:
 			l+=1
-	print("number of one found %d" %f)
-	print("number of two found %d" %l)
+	a = str("number of one found %d" %f)
+	b = str("number of two found %d" %l)
+	return str(a + "\n" + b)
 
 def plainprint():
-	a = b = c = 5
-	print(a,b,c)
+	a = b = c = 6
+	return b
+	
 
-def iterate():
-	num = "123456789"
-	it = iter(num)
-
-	print(int(next(it)))
-	print(int(next(it)))
-	print(int(next(it)))
-	print(int(next(it)))
-	print(int(next(it)))
-	print(int(next(it)))
-	print(int(next(it)))
-	print(int(next(it)))
-	print(int(next(it)))
-
+def convert(num):
+	i = int(num)
+	return i 
 
 
 
 print(substract(50))
-add()
-multiply()
+print(add())
+print(multiply())
 print(int(divide(2)))
-cont(20)
-greater()
-lesser(20)
+print(cont(20))
+print(greater(5, 6))
+print(lesser(20))
 print(int(recursion(20)))
-equal(21)
-forloop()
-whileloop()
-ifstate()
-elifstate()
-swap()
-insert()
-popnum()
+print(equal(21))
+print(forloop())
+print(whileloop())
+print(ifstate())
+print(elifstate(4, 5))
+print(swap(3,5))
+print(insert([1,2,3]))
+print(popnum())
 triangle(6)
-count()
-plainprint()
-iterate()
+print(count([1,1,1,2,2]))
+print(plainprint())
+print(convert("123456"))
